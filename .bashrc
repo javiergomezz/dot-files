@@ -105,6 +105,16 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Profile
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
+
+# Bash prompt
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -116,14 +126,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-JAVA_HOME=/usr/lib/jvm/java-7-oracle
-#JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin
-export JAVA_HOME
-export PATH=$PATH:$JAVA_HOME
-
-export HADOOP_HOME=~/sw/hadoop-2.7.0
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
-
 # Special colored prompt configuration
 export TERM=xterm-256color
-source ~/.bash_prompt
