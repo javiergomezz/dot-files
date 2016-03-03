@@ -1,0 +1,15 @@
+[user]
+    email = javier.gomez@valtech.co.uk
+    name = Javier Gomez
+[color]
+    ui = auto
+[alias]
+    hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
+    last = log -1 HEAD
+    lg = log --graph --pretty=format:'%C(auto) %h %s %C(bold blue)<%an>'
+    stats = shortlog -sn --no-merges
+    tags = tag -l
+[core]
+    excludesfile = ~/.gitignore
+[push]
+	default = simple
