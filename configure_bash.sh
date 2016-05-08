@@ -20,7 +20,8 @@ compare_files ()
   if [ -z "$dif" ]; then
     res="${GREEN}OK${NC}"
   else
-    res="${RED}KO${NC}\n$dif"
+    #res="${RED}KO${NC}\n$dif"
+    res="${RED}KO${NC}"
   fi
 
   echo -e "$1 $res"
