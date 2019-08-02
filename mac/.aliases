@@ -8,7 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias d="cd ~/Documents"
-alias r="cd ~/Doccuments/Repos"
+alias r="cd ~/Documents/repos"
 alias dr="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -35,6 +35,12 @@ alias la="ls -laF ${colorflag}"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# List hidden files and directories
+alias lh="ls -dF .!(|.)"
+
+# List hiden files and directories in long format
+alias lhd="ls -ldF .!(|.)"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
