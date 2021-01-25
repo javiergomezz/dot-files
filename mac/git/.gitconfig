@@ -1,5 +1,6 @@
 [alias]
         hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
+        xhist = log -10 --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
         last = log -1 HEAD
         lg = log --graph --pretty=format:'%C(auto) %h %s %C(bold blue)<%an>'
         stats = shortlog -sn --no-merges
@@ -58,7 +59,7 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Remove branches that have already been merged with master
+        # Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
@@ -173,8 +174,12 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
 [user]
 	name = Javier Gomez
-	email = xgomez@xgomez.com
+        email = xgomez@xgomez.com
+[credential]
+        helper = osxkeychain
+        useHttpPath = true
+
