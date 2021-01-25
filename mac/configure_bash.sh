@@ -39,8 +39,8 @@ check_files()
   compare_files ./git/.gitexcludes ~/.gitexcludes
   compare_files ./git/.gitignore ~/.gitignore
   compare_files ./git/.gitignore_global ~/.gitignore_global
-  compare_files ./vim/.vimrc ~/.vim/.vimrc
-  compare_files ./vim/.gvimrc ~/.vim/.gvimrc
+  compare_files ./vim/.vimrc ~/.vimrc
+  compare_files ./vim/.gvimrc ~/.gvimrc
 }
 
 clear
