@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 
 compare_files ()
 {
-  dif=$(diff $1 $2)
+  dif=$(git diff $1 $2)
   if [ -z "$dif" ]; then
     res="${GREEN}OK${NC}"
   else
