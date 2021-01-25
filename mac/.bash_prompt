@@ -107,6 +107,7 @@ fi;
 PS1="\[\033]0;\w\007\]";
 # PS1+="\[${bold}\]\n"; # bold and newline
 PS1+="\n"; # just newline
+PS1+="\[${violet}\]λ ";
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
