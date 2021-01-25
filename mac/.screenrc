@@ -10,8 +10,9 @@ defutf8 on
 altscreen on
 hardstatus on
 hardstatus alwayslastline
-termcapinfo xterm ti@:te@  
+termcapinfo xterm ti@:te@
 hardstatus string " %{= kC}%-w%{.rW}%n %t%{-}%+w %=%{..C} %H %{..C} %m/%d "
 
 # Bind C-a v to copy buffer to Mac OS X clipboard.
 bind v eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
+
